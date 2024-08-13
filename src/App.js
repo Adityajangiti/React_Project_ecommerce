@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Navbar from "./core/components/layouts/Navbar";
+import Landing from "./core/components/layouts/Landing";
+import Footer from "./core/components/layouts/Footer";
+import RootRouter from "./route-routers/";
 
 function App() {
+  const appName = "Mindsprint";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar appName="Mindsprint" />
+      <RootRouter />
+
+      <Footer />
+    </>
   );
 }
 
